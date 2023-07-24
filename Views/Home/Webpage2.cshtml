@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: "Lato", sans-serif
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        #logo {
+            display: inline-block;
+            margin: 2px;
+            float: left;
+            height: 60px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+
+
+        input[type=text], input[type=password], input[type=number] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+            input[type=text]:focus, input[type=password], input[type=number]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 35px;
+        }
+
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+            button:hover {
+                opacity: 1;
+            }
+
+        .cancelbtn {
+            padding: 14px 20px;
+            background-color: #f44336;
+        }
+
+        .cancelbtn, .signupbtn {
+            float: left;
+            width: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="#"><img id="logo" src="https://t4.ftcdn.net/jpg/04/77/84/59/360_F_477845928_d7f2VuoDerVNAVfZTeKfAmWBOzkJvKIj.jpg" /></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
+            <a href="#sign in" class="w3-bar-item w3-button w3-padding-large w3-hide-small">sign in</a>
+            <a href="#Sign up" class="w3-bar-item w3-button w3-padding-large w3-hide-small">sign up</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">contact</a>
+            <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">about</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">More <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#" class="w3-bar-item w3-button">Service</a>
+                    <a href="#" class="w3-bar-item w3-button">Feedback</a>
+                    <a href="#" class="w3-bar-item w3-button">Customercare</a>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+        </div>
+    </div>
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#Sign in" class="w3-bar-item w3-button w3-padding-1" onclick="myFunction()">Sign in</a>
+        <a href="#Sign up" class="w3-bar-item w3-button w3-padding-1" onclick="myFunction()">Sign up</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-1" onclick="myFunction()">Contact </a>
+        <a href="#about" class="w3-bar-item w3-button w3-padding-1" onclick="myFunction()">About </a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-1" onclick="myFunction()">More</a>
+    </div>
+    <div class="w3-content" style="max-width:2000px;margin-top:45px">
+        <div class="mySlides w3-display-container w3-center">
+            <img src="https://media.istockphoto.com/id/173776882/vector/old-fashioned-open-fairytale-storybook-with-text-design.jpg?s=1024x1024&amp;w=is&amp;k=20&amp;c=uz2YWSQjr-EZxIZTWqh-ZN16ghq5QlH4xKtXBGa8ee0=" alt="Book image" width="500" height="300">
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="https://media.istockphoto.com/id/517778587/photo/old-books-on-wooden-table.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=i0NIIzs1nWilgaao9wLa09AnYvqHDkwj4yIfbY7_lJ0=" alt="book image" width="500" height="300">
+
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781481429368/this-is-a-good-story-9781481429368_hr.jpg" alt="Great Story" width="500" height="300">
+        </div>
+    </div>
+
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="THE STORY WORLD">
+        <h2 class="w3-wide">THE STORY</h2>
+        <p class="w3-opacity"><i>Love to read books</i></p>
+        <p class="w3-justify">
+            Literary critics, historians, avid readers, and even casual readers will all have different opinions on which novel is truly the “greatest book ever written.” Is it a novel with beautiful, captivating figurative language? Or one with gritty realism? A novel that has had an immense social impact? Or one that has more subtly affected the world? Here is a list of 12 novels that, for various reasons, have been considered some of the greatest works of literature ever written.
+        </p>
+        <div class="w3-row w3-padding-32">
+            <div class="w3-third">
+                <p>The Great Book</p>
+                <img src="https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010_640.jpg" alt="Related books" class="w3-round w3-margin-bottom" width="200" height="500">
+            </div>
+            <div class="w3-third">
+                <p>FairyTales</p>
+                <img src="https://c8.alamy.com/comp/2CFGC7T/beauty-and-the-beast-front-cover-of-a-childrens-book-by-jeanne-marie-leprince-de-beaumont-published-in-18756-2CFGC7T.jpg" alt="Book image" class="w3-round w3-margin-bottom" width="200" height="500">
+            </div>
+            <div class="w3-third">
+                <p>The Sleeping Beauty</p>
+                <img src="https://m.media-amazon.com/images/I/61zpVG42eAL.jpg" alt="SLEEPING BEAUTY BOOK" class="w3-round" width="200" height="500">
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-black" name="BOOKS">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+            <h2 class="w3-wide w3-center">BOOKS NAME</h2>
+            <p class="w3-opacity w3-center"><i>Books are important for the mind, heart, and soul</i></p><br>
+
+            <ul class="w3-ul w3-border w3-white w3-text-grey">
+                <li class="w3-padding">BEAUTY AND THE BEAST <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
+                <li class="w3-padding">FAIRY TALES <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
+                <li class="w3-padding">THE STORY <span class="w3-badge w3-right w3-margin-right">10</span></li>
+            </ul>
+
+            <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+                <div class="w3-third w3-margin-bottom">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/p_thejunglebook1967_19869_f10b5016.jpeg?region=0%2C0%2C540%2C810" alt="Book Image" width="200" height="500" class="w3-hover-opacity" />
+                    <div class="w3-container w3-white">
+                        <p><b>THE JUNGLE BOOK</b></p>
+                        <p class="w3-opacity"> Release date: 8 April 2016 (India)</p>
+                        <p>
+                            Director: Jon Favreau
+                            Story by: Rudyard Kipling
+                            Adapted from: The Jungle Book
+                            Distributed by: Walt Disney Studios Motion Pictures
+                            Box office: $966.6 million
+                        </p>
+                        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('books').style.display='block'">Buy now</button>
+                    </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQOEy5pQk3qN7PAV_ZSjwRY9mUqsw-iFVZPuVVuSWjVuejyMdEb" alt=" Book image" width="200" height="500" class="w3-hover-opacity">
+                    <div class="w3-container w3-white">
+                        <p><b>The Magic of the Lost Temple</b></p>
+                        <p class="w3-opacity">Release date: 11 November 2015</p>
+                        <p>City girl Nooni is surprised at the pace of life in her grandparents’ village in Karnataka. But she quickly gets used to the gentle routine there and  including papad making, with her new-found friends.</p>
+                        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('books').style.display='block'">Buy Now</button>
+                    </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSWVj98u4ls8GNBUUjOzayEXXm060-vy8duTZzNQsDAGEg9tHvb" alt="Book Image" width="200" height="500" class="w3-hover-opacity">
+                    <div class="w3-container w3-white">
+                        <p><b>Charlotte's Web</b></p>
+                        <p class="w3-opacity">releaseddate: 29 Nov 2016</p>
+                        <p>Charlotte's Web, classic children's novel by E.B. White, published in 1952, with illustrations by Garth Williams.</p>
+                        <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('books').style.display='block'">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="books" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4">
+            <header class="w3-container w3-teal w3-center w3-padding-32">
+                <span onclick="document.getElementById('books').style.display='none'"
+                      class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+                <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i></h2>
+            </header>
+            <div class="w3-container">
+                <p><label><i class="fa fa-shopping-cart"></i> Books, $250 per book</label></p>
+                <input class="w3-input w3-border" type="text" placeholder="How many?">
+                <p><label><i class="fa fa-user"></i> Send To</label></p>
+                <input class="w3-input w3-border" type="text" placeholder="Enter Address">
+                <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">BUY <i class="fa fa-check"></i></button>
+                <button class="w3-button w3-red w3-section" onclick="document.getElementById('books').style.display='none'">Close <i class="fa fa-remove"></i></button>
+                <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+            </div>
+        </div>
+    </div>
+    <!--sign in-->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="sign in">
+        <h2 class="w3-wide w3-margin-left">Sign in</h2>
+        <p class="w3-opacity w3-margin-left"><i>Please fill in this form to sign in.</i></p>
+        <div class="w3-row w3-padding-32">
+            <div class="w3-col m6">
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="password" placeholder="password" required name="password">
+
+                        </div>
+                    </div>
+                    <div>
+                        <p class="w3-opacity w3-margin-left"><i>By sign-in an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a></i></p>
+
+                        <button class="w3-button w3-black w3-section w3-right" type="submit">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--signup  -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="Sign up">
+        <h2 class="w3-wide w3-margin-left">Sign up</h2>
+        <p class="w3-opacity w3-margin-left"><i>Please fill in this form to create an account.</i></p>
+        <div class="w3-row w3-padding-32">
+            <div class="w3-col m6">
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="password" placeholder="password" required name="password">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="number" placeholder="phonenumber" required name="phonenumber">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="password" placeholder="Confirm password" required name="confirm password">
+                        </div>
+                    </div>
+                    <p class="w3-opacity w3-margin-left"><i>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a></i></p>
+
+                    <button class="w3-button w3-black w3-section w3-right" type="submit">Cancel</button>
+                    <button class="w3-button w3-black w3-section w3-right" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--The About page-->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="about">
+        <h2 class="w3-wide w3-center">About</h2>
+        <p class="w3-opacity w3-center"><i>You Can About us....</i></p>
+        <div class="w3-row w3-padding-32">
+            <div class="w3-col m6 w3-large w3-margin-bottom">
+                <i class="fa fa-aboutbooks" style="width:30px"></i> <strong>Joy of reading engaging children’s story books </strong><br />Give your child our lucid and interesting free children’s story books. The stories and its character keep them captive and helps nurture reading habit, reading story book opens up a whole new world of imagination, make reading a fun-filled entertainment with our free children’s books pdf.
+                <br>
+                <i class="fa fa-aboutus" style="width:30px"></i> <strong>Stories children love to read</strong><br />Children love to listen or read story books, it makes every child to discover the joy of reading as well. When they read more, it helps them to learn better and opens the way to creative world. Stories are abundant, for which we support to enhance reading habit with our free children’s books online. <br>
+                <i class="fa fa-about" style="width:30px"> </i> <strong>Thank you for visiting</strong><br />Our Mission is to provide 10 thousand Free Children's Books to young readers around the globe. Please support us by buying our Personalised Children’s Book or donate at Patreon
+                <br>
+                <i class="fa fa-envelope" style="width:30px"> </i> Email: bookmail@gmail.com<br>
+            </div>
+        </div>
+    </div>
+    <!-- The contact section -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+        <h2 class="w3-wide w3-center">Contact</h2>
+        <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+        <div class="w3-row w3-padding-32">
+            <div class="w3-col m6 w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker" style="width:30px"></i> publisher, US<br>
+                <i class="fa fa-phone" style="width:30px"></i> Phone: 0431 6565 9595<br>
+                <i class="fa fa-envelope" style="width:30px"> </i> Email: bookmail@gmail.com<br>
+            </div>
+            <div class="w3-col m6">
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                    <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-medium">Powered by <a href="https://www.bookworld.com/css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
+
+    <script>
+                        var myIndex = 0;
+                        carousel();
+
+                        function carousel() {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides");
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";
+                            }
+                            myIndex++;
+                            if (myIndex > x.length) { myIndex = 1 }
+                            x[myIndex - 1].style.display = "block";
+                            setTimeout(carousel, 4000);
+                        }
+                        var modal = document.getElementById('books');
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+    </script>
+
+</body>
+</html>
+
